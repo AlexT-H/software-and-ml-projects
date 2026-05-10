@@ -1,37 +1,73 @@
+# AI Neural Network Opponent Bot
 
-# WESTERN GOVERNORS UNIVERSITY
+## Overview
 
-## D683 – ADVANCED AI AND ML
-___________________________________
- 
+This project is a proof-of-concept AI opponent system built for a game-like environment. The goal was to create an opponent capable of challenging users with a target win/draw ratio while remaining scalable for possible future use cases.
 
-### RECOMMENDED PROGRAM REQUIRMENTS:
-#### Software Requirements of Current Build:
-	- Windows 11 (up-to-date)
-           or
-	- Linux 6.xx
-	- Python 3.10+ (localy installed)
+The project demonstrates neural-network experimentation, parameter tuning, AI behavior design, and Python-based prototype development.
 
-#### Hardware Requirements: (Current Build)
-	- 8gb RAM
-	- 3.2 ghz multi-core Processor
+---
 
+## Problem
 
-#### INSTRUCTIONS
-    - Open program folder
-    - Run in Python IDE
-	          or
-    - Run main.py as .exe
+The guiding problem was to create an AI opponent that could provide a meaningful challenge to users rather than acting randomly or predictably.
 
-  *  *to alter main parameters, open main.py, find "parameterTuning", change desired values*
-----------
+Core objective:
 
-#### GUIDING PROBLEM:
-Monte-Point Studios L.L.C. is needing an AI opponent that can challenge users with at least  
-a 50% win/draw ratio. This proof-of-concept solution needs to be scalable for possible future use-cases.
+> Build an AI opponent that can challenge users with at least a 50% win/draw ratio.
 
-----------
+---
 
-#### Future Curations:
-* Enhanced Neural Network training based on additional information (such as player position, order)
-* Implementation of alternate 'win' criteria to guide AI Model to different results (such as pattern recognition)
+## Skills Demonstrated
+
+- Python programming
+- Neural-network prototyping
+- AI opponent behavior design
+- Parameter tuning
+- Model experimentation
+- Basic ML workflow design
+- Proof-of-concept software development
+
+---
+
+## Project Structure
+
+```text
+AI (Neural Network) Opponent Bot/
+├── NeuralNet.py
+├── main.py
+└── README.md
+```
+
+---
+
+## How to Run
+
+Requirements:
+
+- Python 3.10+
+- Windows or Linux environment
+
+Run:
+
+```bash
+python main.py
+```
+
+To adjust major parameters, open `main.py` and locate the parameter-tuning section.
+
+---
+
+## Future Improvements
+
+- Add more training inputs, such as player position or move order.
+- Add alternate win criteria to guide model behavior.
+- Improve pattern recognition.
+- Add clearer model evaluation metrics.
+- Refactor into separate modules for training, evaluation, and gameplay logic.
+
+---
+
+## Portfolio Relevance
+
+This project demonstrates early applied AI/ML experience and the ability to translate a behavioral requirement into a working software prototype.
