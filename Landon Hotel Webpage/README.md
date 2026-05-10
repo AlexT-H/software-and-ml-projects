@@ -1,46 +1,91 @@
+# Landon Hotel Webpage
 
-# WESTERN GOVERNORS UNIVERSITY 
-## D387 – Landon Hotel Webpage
+## Overview
 
----
+This project is a web application built to demonstrate full-stack web development concepts using industry tools. The application runs locally and includes regional display behavior for multiple locales, including US, French, and European display specifications.
 
-## Overview:
-
-This project demonstrates the use of industry tools to create a basic website page example.  
-After initialization, a website is ran on localhost that includes regional display specifications (US, FR, EU).
+The project demonstrates Java/Spring Boot development, Angular frontend work, Maven-based builds, Docker usage, and local web application deployment.
 
 ---
 
-## Build Dependencies:
-```
-- Docker (up-to-data) 
-- Java build (SDK) openjdk-23
-- Maven (up-to-date)
-```
+## Skills Demonstrated
 
----
-
-## Run Instructions:
-```
-1. Use java build (SDK) openjdk-23
-2. Current Maven build
-3. Run D387SampleCodeApplication.java
-4. Run docker image
-5. In preferred browser enter 'localhost:8080' to visit the webpage example
-```
-
----
-
-## Solution Tools:
-
-**Program Utilizes:**  
-- Docker
-- Angular
-- Springboot
-- Maven
-- Node.js
 - Java
+- Spring Boot
+- Angular
+- TypeScript
+- Maven
+- Docker
+- Node.js
+- Local web application deployment
+- Internationalization / regional display logic
 
+---
 
+## Project Structure
 
+```text
+Landon Hotel Webpage/
+├── .mvn/
+├── src/
+├── Dockerfile
+├── pom.xml
+├── mvnw
+├── mvnw.cmd
+└── README.md
+```
 
+---
+
+## Requirements
+
+- Java SDK / OpenJDK
+- Maven
+- Docker
+- Node.js, depending on frontend setup
+
+The original project documentation used OpenJDK 23.
+
+---
+
+## How to Run
+
+General local workflow:
+
+```bash
+./mvnw spring-boot:run
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+If running through Docker, build and run the Docker image according to the project Dockerfile.
+
+---
+
+## Project Features
+
+- Local web application served through Spring Boot
+- Angular-based frontend structure
+- Regional display support
+- Dockerized deployment option
+- Maven project structure
+
+---
+
+## Future Improvements
+
+- Add clearer setup instructions for Windows, macOS, and Linux.
+- Add screenshots of the running webpage.
+- Add notes about regional display behavior.
+- Add a deployment example.
+- Add automated tests for key application behavior.
+
+---
+
+## Portfolio Relevance
+
+This project demonstrates web application development experience across backend, frontend, build tooling, and containerized local deployment.
