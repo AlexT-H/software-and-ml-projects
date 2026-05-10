@@ -1,63 +1,88 @@
-
 # LLM Study
-### *Language Generation*
 
------
+## Overview
 
-## A. Overview
-This program takes an input file and generates an output file with text based on the given data.  
-Customizations that effect character randomization are prompted let the user manipulate the output. 
+This project is a language-generation study that creates output text from a source text file using character-sequence modeling. The user can control parameters such as sequence length, output length, and randomization seed.
 
-*This is a proof of concept design that could scale with increased resources + additional refinements.* 
+The project demonstrates text processing, simple language modeling, user-configurable generation, and analysis of how model behavior changes based on parameter selection.
 
 ---
 
-## B. Program Instructions 
-```
-1. Run main.py with preprocess.py in the same folder
-2. Enter chosen n value
-    - 2a. (n is the number of character sequences studied for generation)
-3. Enter input file with text to generate from
-4. Enter desired output document name
-    - 4a. (or leave blank for default naming)
-5. Enter amount of characters desired in outcome document
-6. Enter randomization seed for generation
-    - 6a. (or leave blank for random seed to be applied)
-7. Observe outcome document in the folder running main.py
+## Project Goal
+
+The goal was to explore how character-sequence length affects generated text quality.
+
+At low sequence lengths, generated text becomes more random and less readable. At higher sequence lengths, output becomes more coherent but may begin to overfit and replicate the source text.
+
+---
+
+## Skills Demonstrated
+
+- Python programming
+- Text processing
+- File I/O
+- Character-sequence modeling
+- Basic language generation
+- Parameterized program design
+- Experimental analysis
+
+---
+
+## Project Structure
+
+```text
+LLM Study/
+├── examples/
+├── aesop_3.txt
+├── aesop_5.txt
+├── aesop_7.txt
+├── aesop_10.txt
+├── main.py
+├── processing.py
+└── README.md
 ```
 
 ---
 
-## C. Brief Analysis 
+## How to Run
+
+Run:
+
+```bash
+python main.py
 ```
-- With the lowest possible n scores, the output is illegible as it does not formulate words properly.
-- At approximately n = 5, words are visible but not conceptually fluid.
-- With 10 and 20 n values respectively, the output becomes more understandable, but still lacks full congruency.
-- At approximately n = 30, this model reaches its current limits. The output starts to become overfit and simply replicates sections of the input text.
-```
-**Outcome:** *Words and sentences are able to be generated with varying degrees of sensibility  
-and are heavily dependent on the selected n value and input text.*
+
+The program prompts for:
+
+1. `n` value, which controls character-sequence length
+2. input text file
+3. output file name
+4. desired output character count
+5. randomization seed
+
+The generated output is saved to the project folder.
 
 ---
 
-## D. Possible Improvements
+## Key Observations
 
-**To further enhance this generation model, more finite grammar abidance and contextualization tools can be deployed.**  
+- Very low `n` values tend to produce illegible output.
+- Mid-range values begin forming recognizable words and phrases.
+- Higher values produce more coherent output but may replicate source text too closely.
+- The model demonstrates the tradeoff between randomness, coherence, and overfitting.
 
-*While the current version does estimate these concepts by merit of it word proximity based design, implementing these specific  
-technics could help  assure better, more accurate syntax for the resulting output.*
+---
 
-#### Possible grammatical filters could include:
-```
-- Noun and Verb Agreement (checking/correcting)
-- Sentence Structure (checking/correcting)
-- Word Gendering (checking/correcting)
-```
+## Future Improvements
 
-#### Possible Contextualization methods could include:
-```
-- Synonym Considering (changing words with synonyms for more differentiation)
-- Noun/Verb Recognition (for keeping a 'train of thought' within the program for greater sensibility) 
-```
+- Add token-based modeling rather than character-only modeling.
+- Add grammar-aware post-processing.
+- Add sentence-boundary handling.
+- Add part-of-speech or phrase-level constraints.
+- Add comparisons between generated outputs across parameter settings.
 
+---
 
+## Portfolio Relevance
+
+This project demonstrates foundational AI/NLP experimentation and shows the ability to build configurable text-processing tools from scratch.
