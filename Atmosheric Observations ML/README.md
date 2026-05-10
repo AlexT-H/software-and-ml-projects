@@ -1,67 +1,93 @@
+# Atmospheric Observations ML
 
-# WESTERN GOVERNORS UNIVERSITY
+## Overview
 
-## D682 - Atmospheric Observations ML
+This project uses a linear regression machine-learning workflow to analyze atmospheric observation data. The model compares multiple atmospheric data columns against a target **Health Risk Score (HRS)** metric and applies optimization techniques to reduce prediction error.
 
---- 
-
-## Overview:
-  
-This program uses a Linear Regression ML model to compare, and then extrapulate from the given columns  
-of atmospheric data. Several optimization technics and evaluation metrics are delpoyed to create an accurate model.
-
-
-Overall Structure:
-- Retrieve data
-- Sort based on Health Risk Score index (HRS)
-- Calculate regression lines based on data columns
-- Develop a regression line to mirror the HRS line
-- Test ~ Evaluate ~ Amend
-- Cycle later until satisfied
-
-Testing Cycle:
-- Train data
-- Test data with current variables
-- Alter variables with boosting function
-- Evaluate results 
-
-*By running main.py, this program analyzes the given data, giving weights to columns that more closely align with the  
-desired metric (in   this case HRS). To adapt this model to another use case, the data being analyzed and csv reading  
-functions would have to be altered to match the new files format. column and row information would have to be  
-interchanged with the new data for the given problem. If ran with this new data, the model would be able to preform  
-Linear Regression analysis and function just as the current program does.*
+The project demonstrates data preparation, regression modeling, iterative evaluation, and basic model optimization.
 
 ---
 
-## Outcomes:
-Original Model:
-```
-Average Error: 6.7068
-Mean Absolute Percentage Error:  68.2 %
-R-Squared:  0.46539002027071996
-RMS Error:  71.42 
-```
-Optimized Model:
-```
-Average Error: 0.6599
-Mean Absolute Percentage Error:  6.86 %
-R-Squared:  0.5003
-RMS Error:  0.7 
-```
-*  Before the optimization, the estimated values for each HRS are seen to have a large error, including a MAPE of 68.2%.  
-After the use of weighted averaging, pruning, L1 and L2 regularization, quantization and boosting, the now trained  
-model is observed to have reached lower error metrics of Average Error, RMSE, and MAPE (now with a score of 7.74%).  
-Thus, the optimization techniques utilized are seen to provide a more accurate prediction proven by the lesser error margins.
+## Project Goal
+
+The goal was to build and improve a regression model that could estimate a target atmospheric risk score from structured observation data.
+
+Overall workflow:
+
+1. Load atmospheric observation data.
+2. Sort or evaluate records based on the HRS target.
+3. Calculate relationships between input columns and the target metric.
+4. Develop a regression-based model.
+5. Train, test, evaluate, and adjust the model.
+6. Compare original and optimized performance.
 
 ---
 
-## Future Optimizations:
- - better randomization for test/train row assignment
- - could alter boosting function: changing accuracy and time complexity
- - boosting could be configured more so off of best-fitting evaluation metrics
- 
+## Skills Demonstrated
+
+- Python programming
+- CSV data handling
+- Linear regression
+- Feature weighting
+- Model evaluation
+- Error analysis
+- Iterative ML optimization
+- Data-driven experimentation
+
 ---
 
-## Notes:
-Air Quality Index = Health Index (without Misc data)  
-Misc = DateTime data  
+## Project Structure
+
+```text
+Atmosheric Observations ML/
+├── atmosphereData.csv
+├── main.py
+└── README.md
+```
+
+---
+
+## How to Run
+
+Requirements:
+
+- Python 3.10+
+- `atmosphereData.csv` in the project folder
+
+Run:
+
+```bash
+python main.py
+```
+
+The script analyzes the provided atmospheric dataset and outputs model performance information.
+
+---
+
+## Model Evaluation
+
+The project compares original and optimized model behavior using metrics such as:
+
+- average error
+- mean absolute percentage error
+- R-squared
+- root mean squared error
+
+Optimization techniques explored include weighted averaging, pruning, regularization, quantization, and boosting-style adjustment.
+
+---
+
+## Future Improvements
+
+- Refactor the code into reusable data, training, and evaluation modules.
+- Add visualizations for model predictions and residuals.
+- Add train/test split configuration.
+- Add feature-importance reporting.
+- Improve documentation around the dataset and target metric.
+- Adapt the workflow to new atmospheric or environmental datasets.
+
+---
+
+## Portfolio Relevance
+
+This project supports my GIS and environmental-data interests by showing experience with atmospheric data, regression modeling, and iterative ML evaluation.
