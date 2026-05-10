@@ -1,30 +1,84 @@
-# WESTERN GOVERNORS UNIVERSITY
+# WGUPS Routing Solution
 
-## C950 - WGU Postal Service
+## Overview
 
----
+This project is a package-routing optimization program for the WGU Postal Service scenario. It uses package data and distance data to create efficient delivery routes and allows users to check package status at a selected time.
 
-## Overview:
-
-This program uses a Heuristic algorithm to sort packages into optimal routes for WGU Postal Service.  
-Package information, such as delivery address, weight, and special notes is provided via the Package_File.csv  
-and the Distance_Table.csv provides the distances between delivery locations.  
-  
-The program functions by assigning packages to routes, and then allows the user to check a package at a certain time.
+The project demonstrates algorithmic problem-solving, data structures, routing logic, and CSV-based data processing.
 
 ---
 
-## Run Instructions:
+## Problem
+
+The application needed to assign packages to delivery routes using available package and distance data, then report package status based on time.
+
+This is related to the classic Traveling Salesman Problem, where the goal is to minimize travel distance while satisfying delivery constraints.
+
+---
+
+## Skills Demonstrated
+
+- Python programming
+- Routing algorithms
+- Heuristic optimization
+- CSV data processing
+- Data structures
+- Time-based package status logic
+- Command-line interaction
+
+---
+
+## Project Structure
+
+```text
+WGUPS Routing Solution/
+├── WGUPS_Distance_Table.csv
+├── WGUPS_Package_File.csv
+├── main.py
+└── README.md
 ```
-1. Run main.py with applicable csv files in the same folder
-2. Input package ID to check location of
-3. Read the displayed information
-4. Input 'y' to view another package instance
-```
 
 ---
 
-## Use Cases:
+## How to Run
 
-- This program can be used to manage other delivery situations if provided with package and distance data.
-- This solution could also be adapted to other use cases that also have the "Traveling Salesman" problem.
+Ensure these files are in the project folder:
+
+- `WGUPS_Distance_Table.csv`
+- `WGUPS_Package_File.csv`
+
+Run:
+
+```bash
+python main.py
+```
+
+The program will prompt for package information and display status based on the selected time.
+
+---
+
+## Use Cases
+
+The routing approach could be adapted to other delivery or route-planning situations when provided with:
+
+- package or stop data
+- location/distance data
+- delivery constraints
+- time-based status requirements
+
+---
+
+## Future Improvements
+
+- Add map-based visualization.
+- Add route comparison metrics.
+- Add additional delivery constraints.
+- Add automated tests.
+- Refactor route logic into separate modules.
+- Add documentation of the heuristic strategy.
+
+---
+
+## Portfolio Relevance
+
+This project is especially relevant to GIS and spatial problem-solving because it demonstrates routing logic, distance-based optimization, and practical handling of location-related data.
